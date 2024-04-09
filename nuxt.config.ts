@@ -10,14 +10,10 @@ export default defineNuxtConfig({
       title: 'Тестовое ВДНХ'
     }
   },
-
-  vue: {
-    // compilerOptions: {
-    //   isCustomElement: (tag) => tag.startsWith('swiper-')
-    // }
-  },
-
-  modules: ['@nuxtjs/i18n'],
+  modules: [
+      '@nuxtjs/i18n',
+      'nuxt-swiper'
+  ],
   i18n: {
     vueI18n: './i18n.config.ts'
   }

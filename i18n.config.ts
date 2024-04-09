@@ -7,11 +7,17 @@ export default defineI18nConfig(() => ({
                 month: 'long',
                 day: '2-digit'
             },
-            calendarDay: {
+            day2Digit: {
+                day: '2-digit'
+            },
+            dayNumeric: {
                 day: 'numeric'
             },
             weekDay: {
                 weekday: 'short'
+            },
+            month: {
+                month: 'long'
             }
         }
     },
