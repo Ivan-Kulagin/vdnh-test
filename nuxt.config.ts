@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   css: ['~/public/css/globals.css', '~/public/css/styles.css'],
 
   app: {
+    baseURL: '/vdnh-test/',
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
