@@ -1,11 +1,11 @@
-import EventsAPI from '../../../entities/event'
+import { EventAPI } from 'entities/event'
 
 export const useAfishaEvents = async () => {
     const fetchingEvents = ref(false)
     async function fetchEvents() {
         try {
             fetchingEvents.value = true
-            const response = await EventsAPI.fetchEvents();
+            const response = await EventAPI.fetchEvents();
             return await response.json();
         } catch (error) {
             throw new Error('Failed to fetch events' + error)

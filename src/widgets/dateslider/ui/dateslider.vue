@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import Angle from '~/src/widgets/dateslider/ui/icon/Angle.vue'
-import Dateslideritem from '~/src/widgets/dateslider/ui/dateslideritem.vue'
+import Angle from './icon/Angle.vue'
+import Dateslideritem from './dateslideritem.vue'
 
 const emit = defineEmits(['update:modelValue', 'slide:click'])
 
