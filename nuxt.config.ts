@@ -3,7 +3,7 @@ import { fileURLToPath } from 'mlly'
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  css: ['~/public/css/globals.css', '~/public/css/styles.css'],
+  css: ['~/src/app/styles/index.scss'],
 
   app: {
     baseURL: '/vdnh-test/',
@@ -15,6 +15,7 @@ export default defineNuxtConfig({
   },
 
   alias: {
+    'public': fileURLToPath(new URL('./public', import.meta.url)),
     'app': fileURLToPath(new URL('./src/app', import.meta.url)),
     'pages': fileURLToPath(new URL('./src/pages', import.meta.url)),
     'widgets': fileURLToPath(new URL('./src/widgets', import.meta.url)),

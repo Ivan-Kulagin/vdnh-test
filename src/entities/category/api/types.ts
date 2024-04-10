@@ -1,3 +1,3 @@
 export interface CategoryAPI {
-    fetchEvents: () => Promise<Response>
+    fetchCategories: () => Promise<Response>
 }

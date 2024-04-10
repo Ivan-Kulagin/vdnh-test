@@ -1,18 +1,10 @@
 <template>
-  <div class="vdnh-ru-main">
-    <div class="vdnh-div-wrapper">
-      <div class="vdnh-div-content">
-        <div class="russia-block-wrapper">
-          <AfishaPage />
-        </div>
-      </div>
-    </div>
-  </div>
+  <AppLayout>
+    <PageRussia />
+  </AppLayout>
 </template>
 
 <script setup lang="ts">
-import { AfishaPage } from "./src/pages/afisha"
+import { PageRussia } from 'pages/russia'
+import { AppLayout } from 'app'
 </script>
-
-<style>
-</style>

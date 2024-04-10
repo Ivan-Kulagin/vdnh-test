@@ -28,7 +28,20 @@ import AfishaCard from './afisha-card.vue'
           :event-type="element.type"
         />
       </template>
-
+      <afisha-card
+        link="https://vdnh.ru/events/"
+        wrapper-class="afisha-element-red-img--wrapper"
+        container-class="afisha-element-red"
+        image-class="afisha-element-red-img"
+        :image="{ src: 'https://vdnh.ru/local/templates/russia_forum/img/small_sprite.jpg', alt: '' }"
+      >
+        <div class="afisha-element-red--content">
+                <span class="afisha-element-red-title">
+                  Больше событий на сайте ВДНХ
+                </span>
+          <img src="https://vdnh.ru/local/templates/russia_forum/img/BIG_ARROW.svg" alt="">
+        </div>
+      </afisha-card>
     </template>
   </div>
 </template>

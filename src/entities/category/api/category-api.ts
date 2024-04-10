@@ -5,7 +5,7 @@ enum Endpoints {
 }
 
 export const api: CategoryAPI = {
-    fetchEvents() {
+    fetchCategories() {
         return fetch(Endpoints.FETCH_CATEGORIES)
     }
 }
