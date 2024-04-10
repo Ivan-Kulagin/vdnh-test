@@ -5,15 +5,14 @@
 
 <script setup lang="ts">
 import type { Ref } from 'vue'
-import type { CategoryItem } from 'entities/category'
-import type { EventItem } from 'entities/event'
+import { useCategoryAPI, type CategoryItem } from 'entities/category'
+import { useEventAPI, type EventItem } from 'entities/event'
 
 import AfishaEvents from "./afisha-events.vue"
 import AfishaCategories from './afisha-categories.vue'
 
 import { applyFilters } from 'shared/utils/filters'
 import { categoryFilter, dateFilter } from 'features/events/filters'
-import { useAfishaEvents } from '../composables/useAfishaEvents'
 
 interface Props {
     date: Date | null
@@ -23,14 +22,14 @@ const props = defineProps<Props>()
 const defaultCategory: CategoryItem = { text: 'Все', value: null }
 const selectedCategory: Ref<CategoryItem> = ref(defaultCategory)
 
+const fetchingAfisha = ref(true)
 const categories: Ref<CategoryItem[]> = ref([])
 const events: Ref<EventItem[]> = ref([])
 
-const fetchingAfisha = ref(true)
 onMounted(async () => {
-    const { categories: categoriesData, events: eventsData } = await useAfishaEvents()
+    const { events: eventsData } = await useEventAPI().fetchEvents()
+    const { labels: categoriesData } = await useCategoryAPI().fetchCategories()
     fetchingAfisha.value = false
-
     categories.value = [defaultCategory, ...categoriesData]
     events.value = eventsData
 })

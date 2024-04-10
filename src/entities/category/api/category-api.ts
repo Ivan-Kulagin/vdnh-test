@@ -1,11 +1,14 @@
-import { type CategoryAPI } from './types'
+import type { CategoryAPI } from './types'
 
 enum Endpoints {
-    FETCH_CATEGORIES = "https://run.mocky.io/v3/bla-bla-bla"
+    FETCH_CATEGORIES = "7674f5a2-f0a0-40c8-acf1-50845f5202fe"
 }
 
-export const api: CategoryAPI = {
-    fetchCategories() {
-        return fetch(Endpoints.FETCH_CATEGORIES)
+export const useCategoryAPI = (): CategoryAPI => {
+    const { apiUrl } = useRuntimeConfig().public
+    return {
+        fetchCategories() {
+            return $fetch(apiUrl + Endpoints.FETCH_CATEGORIES)
+        }
     }
 }

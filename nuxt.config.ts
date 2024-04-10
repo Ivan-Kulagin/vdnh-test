@@ -14,6 +14,12 @@ export default defineNuxtConfig({
     }
   },
 
+  runtimeConfig: {
+    public: {
+      apiUrl: 'https://run.mocky.io/v3/'
+    }
+  },
+
   alias: {
     'public': fileURLToPath(new URL('./public', import.meta.url)),
     'app': fileURLToPath(new URL('./src/app', import.meta.url)),

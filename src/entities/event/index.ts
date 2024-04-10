@@ -1,8 +1,8 @@
-import { api } from "./api/event-api"
-import event from "./ui/event.vue"
+import { useEventAPI } from './api/event-api'
+import event from './ui/event.vue'
 
-export { type EventItem } from "./types"
+export { type EventItem } from './types'
 export {
-    api as EventAPI,
+    useEventAPI,
     event as Event
 }
