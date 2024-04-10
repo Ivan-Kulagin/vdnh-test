@@ -1,13 +1,17 @@
 <template>
   <div class="russia-block-wrapper">
-    <WidgetAfisha />
+    <WidgetAfishaTitle :date="date" />
+    <WidgetDateSlider v-model="date" />
+    <WidgetAfishaBoard :date="date" />
   </div>
 </template>
 
 <script setup lang="ts">
-import { WidgetAfisha } from 'widgets/afisha'
+import { WidgetAfishaTitle, WidgetAfishaBoard } from 'widgets/afisha'
+import { WidgetDateSlider } from 'widgets/dateslider'
+const date = ref(null)
 </script>
 
 <style scoped lang="scss">
-@import "styles";
+@import 'styles';
 </style>

@@ -13,5 +13,5 @@
 </template>
 
 <style scoped lang="scss">
-@import "styles";
+@import 'styles';
 </style>

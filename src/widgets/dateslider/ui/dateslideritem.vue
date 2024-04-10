@@ -39,6 +39,6 @@ defineProps({
   </div>
 </template>
 
-<style scoped>
-
+<style scoped lang="scss">
+@import 'styles/index';
 </style>

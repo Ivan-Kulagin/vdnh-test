@@ -1,2 +1,2 @@
-import Afisha from './ui/afisha.vue'
-export { Afisha as WidgetAfisha }
+export * from './board'
+export * from './title'

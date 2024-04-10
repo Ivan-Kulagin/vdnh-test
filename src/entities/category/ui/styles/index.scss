@@ -1,0 +1,43 @@
+.category {
+  display: flex;
+  padding: 9px 12px;
+  gap: 8px;
+  align-items: flex-start;
+  border-radius: 16px;
+  border: 1px solid rgba(211, 17, 43, 0.40);
+  background: var(--Wite, #FFF);
+  cursor: pointer;
+  color: #000;
+  font-family: Suisse Intl-Regular;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 18px;
+  /* 112.5% */
+
+  @media (max-width: 991.98px) {
+      text-align: center;
+      font-size: 14px;
+      line-height: normal;
+      align-items: center;
+      display: flex;
+      border-radius: 16px;
+  }
+
+  &--text {
+    padding-top: 3px;
+  }
+
+  &--active {
+    background: #CE1531;
+    color: #FFF;
+  }
+
+  &--loading {
+    width: 101px;
+    height: 41px;
+    border: none;
+    background-color: #f5f5f5;
+  }
+}
+

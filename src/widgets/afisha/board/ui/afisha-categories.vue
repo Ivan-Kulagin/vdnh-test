@@ -1,36 +1,35 @@
 <script setup lang="ts">
-import type { AfishaType } from '../types'
-import AfishaCategory from './afisha-category.vue'
+import { Category as AfishaCategory, type CategoryItem } from 'entities/category';
 
 interface Props {
-    categories: AfishaType[]
-    modelValue: AfishaType,
+    categories: CategoryItem[]
+    modelValue: CategoryItem,
     loading?: boolean
 }
 
 interface OnClickType {
     originalEvent: Event,
-    category: AfishaType
+    category: CategoryItem
 }
 
 const props = defineProps<Props>()
 const emit  = defineEmits<{
     'click:type': [value: OnClickType]
-    'update:modelValue': [value: AfishaType | null]
+    'update:modelValue': [value: CategoryItem | null]
 }>()
 
-const handleCategoryClick = (event: Event, category: AfishaType): void => {
+const handleCategoryClick = (event: Event, category: CategoryItem): void => {
     emit('click:type', {originalEvent: event, category})
     if (!isActive(category)) {
         updateModel(category)
     }
 }
 
-const updateModel = (value: AfishaType): void => {
+const updateModel = (value: CategoryItem): void => {
     emit('update:modelValue', value)
 }
 
-const isActive = (category: AfishaType): boolean => {
+const isActive = (category: CategoryItem): boolean => {
     return props.modelValue.value === category.value
 }
 </script>
@@ -38,12 +37,15 @@ const isActive = (category: AfishaType): boolean => {
 <template>
   <div class="russia-afisha-categories">
     <template v-if="loading">
-      <template v-for="category in 10">
-        <afisha-category :loading="loading" />
-      </template>
-    </template>
-    <template v-for="category of categories" :key="category.value">
       <afisha-category
+        v-for="category in 10"
+        :loading="loading"
+      />
+    </template>
+    <template v-else>
+      <afisha-category
+        v-for="category of categories"
+        :key="category.value"
         :label="category.text"
         :active="isActive(category)"
         @click="handleCategoryClick($event, category)"
@@ -52,6 +54,6 @@ const isActive = (category: AfishaType): boolean => {
   </div>
 </template>
 
-<style scoped>
-
+<style scoped lang="scss">
+@import 'styles';
 </style>

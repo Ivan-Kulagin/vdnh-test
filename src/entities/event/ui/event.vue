@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import type { ImageMeta } from '../types'
-
-type VueComponentClass = (string | Record<string, boolean>)[] | string
+import type { VueComponentStyleClass } from 'shared/types'
 
 interface Props {
     link: string
@@ -10,15 +9,15 @@ interface Props {
     title?: string
     date?: string
 
-    containerClass?: VueComponentClass
-    wrapperClass?: VueComponentClass
-    imageClass?: VueComponentClass
+    containerClass?: VueComponentStyleClass
+    wrapperClass?: VueComponentStyleClass
+    imageClass?: VueComponentStyleClass
 }
 
 const props = withDefaults(defineProps<Props>(), {
-    containerClass: () => ['afisha-element'],
-    wrapperClass: () => ['afisha-element-image--wrapper'],
-    imageClass: () => ['afisha-element-img']
+    containerClass: () => ['vdnh-event'],
+    wrapperClass: () => ['vdnh-event-image--wrapper'],
+    imageClass: () => ['vdnh-event-img']
 })
 </script>
 
@@ -28,13 +27,13 @@ const props = withDefaults(defineProps<Props>(), {
       <img v-if="image" :src="image.src" :alt="image.alt" loading="lazy" :class="imageClass">
     </div>
     <slot v-bind="props">
-      <span class="afisha-element-type">{{ eventType }}</span>
-      <span class="afisha-element-title">{{ title }}</span>
-      <span class="afisha-element-time">{{ date }}</span>
+      <span class="vdnh-event-type">{{ eventType }}</span>
+      <span class="vdnh-event-title">{{ title }}</span>
+      <span class="vdnh-event-time">{{ date }}</span>
     </slot>
   </a>
 </template>
 
-<style scoped>
-
+<style scoped lang="scss">
+@import 'styles';
 </style>

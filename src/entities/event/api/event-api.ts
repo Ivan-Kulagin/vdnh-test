@@ -7,6 +7,6 @@ enum Endpoints {
 
 export const api: EventAPI = {
     fetchEvents() {
-        return fetch(Endpoints.FETCH_EVENTS)
+        return $fetch(Endpoints.FETCH_EVENTS)
     }
 }

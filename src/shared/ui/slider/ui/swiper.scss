@@ -1,0 +1,45 @@
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper__btn {
+  min-height: 100%;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  transition: transform .3s ease-in-out;
+}
+
+.swiper__btn svg {
+  margin-top: 20px;
+}
+
+.swiper__btn:hover {
+  transform: scale(1.2);
+}
+
+.swiper-button-disabled.swiper__btn {
+  opacity: .3;
+  transform: scale(1);
+}
+
+.swiper-button-disabled.swiper__btn:hover {
+  transform: scale(1);
+}

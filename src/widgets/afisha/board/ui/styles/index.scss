@@ -1,0 +1,37 @@
+.russia-afisha-categories {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.vdnh-events {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 33px;
+  justify-content: flex-start;
+}
+
+@media (max-width: 991.98px) {
+  .russia-afisha-categories {
+    flex-wrap: wrap;
+  }
+
+  .vdnh-events {
+    gap: 0px;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 576px) {
+  .vdnh-events {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 33px;
+    justify-content: flex-start;
+  }
+}

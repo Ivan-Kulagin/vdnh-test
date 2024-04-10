@@ -12,8 +12,3 @@ export interface EventItem {
     type: string,
     unix: number,
 }
-
-export interface AfishaType {
-    text: string,
-    value: string | null
-}
