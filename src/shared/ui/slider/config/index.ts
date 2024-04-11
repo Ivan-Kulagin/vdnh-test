@@ -1,3 +1,4 @@
+import { Navigation } from 'swiper/modules'
 export const swiperOptions = {
     spaceBetween: 10,
     centeredSlides: false,
@@ -8,8 +9,9 @@ export const swiperOptions = {
         992:  { slidesPerView: 10 },
         1200: { slidesPerView: 15 }
     },
+    modules: [Navigation],
     navigation: {
-        prevEl: '.swiper__button--prev',
-        nextEl: '.swiper__button--next'
+        prevEl: '.swiper-nav-button--prev',
+        nextEl: '.swiper-nav-button--next'
     }
 }

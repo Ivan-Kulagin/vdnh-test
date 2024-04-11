@@ -33,7 +33,7 @@ const isActive = (date: Date): boolean => {
 
 <template>
   <div style="display: flex; width: 100%;">
-    <button class="swiper__btn swiper__button--prev"><Angle /></button>
+    <button class="swiper__btn swiper-nav-button--prev"><Angle /></button>
     <swiper
       v-bind="swiperOptions"
     >
@@ -46,7 +46,7 @@ const isActive = (date: Date): boolean => {
         />
       </swiper-slide>
     </swiper>
-    <button class="swiper__btn swiper__button--next"><Angle right /></button>
+    <button class="swiper__btn swiper-nav-button--next"><Angle right /></button>
   </div>
 </template>
 
