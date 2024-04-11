@@ -39,9 +39,9 @@ withDefaults(defineProps<Props>(), {
       >
         <div class="vdnh-event-red--content">
                 <span class="vdnh-event-red-title">
-                  Больше событий на сайте ВДНХ
+                  {{ $t('moreEvents' )}}
                 </span>
-          <img :src="arrow" alt="arrow">
+          <img :src="arrow" alt="more-events">
         </div>
       </afisha-event>
     </template>

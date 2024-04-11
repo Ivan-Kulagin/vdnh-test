@@ -8,9 +8,9 @@ defineProps<Props>()
 </script>
 
 <template>
-  <DateTitle label="Афиша событий">
+  <DateTitle :label="$t('afishaTitle')">
     <template v-if="date">
-      на <span class="brand-text">{{ formatDate(date, 'regular') }}</span>
+      {{ $t('onDatePrefix') }} <span class="brand-text">{{ formatDate(date, 'regular') }}</span>
     </template>
   </DateTitle>
 </template>
